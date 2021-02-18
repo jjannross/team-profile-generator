@@ -7,7 +7,7 @@ describe('Employee', () => {
     });
     
     test("Can set name with constructor params", () => {
-        const name = "Alice";
+        const name = "Sarah";
         const e = new Employee(name);
         expect(e.name).toBe(name);
     });
