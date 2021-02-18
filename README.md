@@ -1,12 +1,13 @@
 # team-profile-generator
+
 Command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
 
-
-![home page](./assets/images/1.png)
-![l](./assets/images/2.png)
-![d](./assets/images/3.png)
+![Team Profiles](./assets/images/1.png)
+![Passing Tests](./assets/images/3.png)
+![Command Line](./assets/images/2.png)
 
 To visit the team profile generator [click here](https://jjannross.github.io/team-profile-generator/)
+To watch a demonstration [click here](https://drive.google.com/file/d/1IGa8qIBifLIsSe2Ar2Bw5om-M6ZhlscN/view?usp=sharing)
 
 ## Prerequisites
 

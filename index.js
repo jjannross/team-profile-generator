@@ -22,7 +22,6 @@ let createTeam = {
     "No, my team is complete",
   ],
 };
-//if yes, i would like an enginer then engineerPrompt(), if yes, intern then internPrompt(), if no, my team is complete, then buildHtml().
 
 let managerPrompt = [
   {
@@ -50,7 +49,6 @@ let managerPrompt = [
     message: "What is your manager's office number",
     name: "managerOffice",
   },
-  //call createTeam()
 ];
 let internPrompt = [
   {
@@ -73,7 +71,6 @@ let internPrompt = [
     message: "What is your intern's school",
     name: "internSchool",
   },
-  //call createTeam()
 ];
 
 let engineerPrompt = [
@@ -97,20 +94,17 @@ let engineerPrompt = [
     message: "What is your engineer's GitHub username",
     name: "engineerGithub",
   },
-  //call createTeam()
 ];
-
-// buildHtml ()
 
 function addTeam() {
   inquirer.prompt(createTeam).then((data) => {
-    // ["Yes, I would like to add an Engineer.", "Yes, I would like to an Intern.", "No, my team is complete"]
     if (data.teamMembers === "Yes, I would like to add an Engineer.") {
       addEngineer();
     } else if (data.teamMembers === "Yes, I would like to an Intern.") {
       addIntern();
     } else {
       buildHtml();
+      console.log("open new.html in a broswer to checkout your team!");
     }
   });
 }
@@ -170,53 +164,4 @@ inquirer.prompt(managerPrompt).then((data) => {
   teamMembersArr.push(manager);
 
   addTeam();
-
-  // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-  // const html =
-  // `
-  // <!DOCTYPE html>
-  // <html lang="en">
-  //   <head>
-  //     <meta charset="UTF-8" />
-  //     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  //     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  //     <link
-  //       rel="stylesheet"
-  //       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  //     />
-  //     <link
-  //       rel="stylesheet"
-  //       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-  //       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-  //       crossorigin="anonymous"
-  //     />
-  //     <link rel="preconnect" href="https://fonts.gstatic.com">
-  //     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-  //     <link rel="stylesheet" href="./style.css" />
-
-  //     <title>${teamName} Team Profiles</title>
-  //   </head>
-
-  //   <body>
-  //     <header>
-  //       <nav class="navbar navbar-expand-lg navbar-light bg-custom">
-  //         <div class="container-fluid">
-  //           <h1 class="mx-auto display-4">${teamName} Team Profiles</h1>
-  //         </div>
-  //       </nav>
-  //     </header>
-  //     <div class="container-fluid mx-auto">
-
-  //         <div class="row employeeRow">
-  //         ${addCard}
-  //         </div>
-  //         </div>
-  //         <script src="index.js"></script>
-  //         </body>
-  //     </html>
-  // `
-
-  // fs.writeFile("index.html", html, (err) =>
-  //   err ? console.log(err) : console.log("Success!")
-  // );
 });

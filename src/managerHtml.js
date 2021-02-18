@@ -1,5 +1,5 @@
 const managerHtml = (role) => {
-    return `
+  return `
     <div class="col-md-3 card employeeCard border bg-custom">
     <div class="card-header">
         <h3>${role.name}</h3>
@@ -7,9 +7,9 @@ const managerHtml = (role) => {
     </div>
     <p class="card-text">Employee ID: ${role.id}</p>
     <p class="card-text"><a href="mailto:">${role.email}</a></p>
-    <p class="card-text">Office Number: ${role.officeNumber}</p>
+    <p class="card-text">Office Number: ${role.managerOffice}</p>
 </div>
-`
-}
+`;
+};
 
 module.exports = managerHtml;

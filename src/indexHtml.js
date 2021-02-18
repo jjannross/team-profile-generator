@@ -20,14 +20,14 @@ const html = (teamName, addCard) => {
         <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css" />
         
-        <title>${teamName} Team Profiles</title>
+        <title>${teamName}'s Profiles</title>
       </head>
     
       <body>
         <header>
           <nav class="navbar navbar-expand-lg navbar-light bg-custom">
             <div class="container-fluid">
-              <h1 class="mx-auto display-4">${teamName} Team Profiles</h1>
+              <h1 class="mx-auto display-4">${teamName}'s Profiles</h1>
             </div>
           </nav>
         </header>
